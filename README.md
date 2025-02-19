@@ -1,4 +1,5 @@
 # egui-portfolio
+https://gmcmichael.github.io/egui-portfolio/
 
 ## egui with eframe
 
@@ -45,3 +46,5 @@ To build the project without hosting simply run `cargo build` as normal
 ---
 ### Production
 Running `trunk build --release` will generate files in a `dist` directory that can be served as static html.
+
+This repo is setup with Github Actions to automatically build any push to the main branch and hosts the dist directory on Github Pages
