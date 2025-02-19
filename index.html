@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://gmcmichael.github.io/egui-portfolio/index.css" integrity="sha384&#x2D;DV84Ees9jbw7pkwJN7HrQVopRs8SyZg0c7fW1xc7j&#x2B;1&#x2F;O6a3tKpbSkXN1d9kZJll"/>
+<link rel="modulepreload" href="https://gmcmichael.github.io/egui-portfolio/portfolio.js" crossorigin="anonymous" integrity="sha384-2Jv5EK0kpx0ywegDpGPIW+EqX6Jyv2wzaEQWuqFMEKNsLqVCtFK5G/yTq+GHTUex"><link rel="preload" href="https://gmcmichael.github.io/egui-portfolio/portfolio_bg.wasm" crossorigin="anonymous" integrity="sha384-T6hneRqOPbpd0zdOIm3Y3Po66nWElIba+z9ETq4Jr9Eo7EWNwJ8tBrbkNoQPmIiu" as="fetch" type="application/wasm"></head>
+
+<body>
+    <canvas id="canvasId"></canvas>
+
+<script type="module">
+import init, * as bindings from 'https://gmcmichael.github.io/egui-portfolio/portfolio.js';
+const wasm = await init({ module_or_path: 'https://gmcmichael.github.io/egui-portfolio/portfolio_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script></body>
+
+</html>
